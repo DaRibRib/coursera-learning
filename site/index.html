@@ -8,12 +8,25 @@
 	</header>
 </head>
 <body>
-	<h1>Learning HTML from Coursera</h1>
+	<h1 id="top">Learning HTML from Coursera</h1>
 	<h3>My journey so far on the Coursera (course) on HTML, CSS and JavaScript</h3>
 	
 	<br>
 	
 	<section>
+		<h2>Contents:</h2>
+		<ul>
+			<li><a href="#lecture5">Div and span elements</a></li>
+			<li><a href="#lecture7">Semantic elements</a></li>
+			<li><a href="#lecture7">Lists</a></li>
+			<li><a href="#lecture8">HTML character entity references</a></li>
+			<li><a href="#lecture9">Links</a></li>
+		</ul>
+	</section>
+	
+	<br>
+	
+	<section id="lecture5">
 		<h2>Think this was Lecture 05 - on div and span elements</h2>
 		<div>Learnt about div tags and <span>span tags as well.</span>
 		Hopefully I'm learning something about it...</div>
@@ -26,7 +39,7 @@
 	
 	<br>
 	
-	<section>
+	<section id="lecture6">
 		<h2>Something on semantic elements - Lecture 06 if I had to guess</h2>
 		<div>Semantic means something that adds to something else to ADD more informaion or logic...</div>
 		<div>Also learnt about the article element.</div>
@@ -39,7 +52,7 @@
 	
 	<br>
 	
-	<section>
+	<section id="lecture7">
 		<h2> Different kinds of lists - Lecture 7</h2>
 		<div>For unordered lists, you must use the ul tag(just means Unordered List), and for everything you put inside of it, you add the li tag.</div>
 		<div> So, for example, here are the reasons why you should join the course I've enrolled in:
@@ -61,7 +74,7 @@
 		
 	<br>
 		
-	<section>
+	<section id="lecture8">
 		<h2>Probably lecture 8 because the last thing I did was lecture 7 - HTML character entity references</h2>
 		<div>So in HTML, you weirdly can't use some characters you could usually use on your keyboard
 		<span>(like "greater than", "less than" and "and" symbols)</span>
@@ -81,6 +94,30 @@
 	</section>
 	
 	<br>
+	
+	<section id="lecture9">
+		<h2> Lecture 9 - on creating links (its TOO much)</h2>
+		<div> So I learnt how to make links to various places - and it still hurts my mind thinking about it.</div>
+		<div>You can:
+			<ul>
+				<li>Link to other pages wthin the same site (internal links)</li>
+				<li>Link to other websites (external links)</li>
+				<li>Link to sections withing the same document</li>
+			</ul>
+		</div>
+		<div>To link, you need to use the a element (meaning anchor) with the href attribute and an equals sign next to it. Then add speech marks and put the name of the file or external website url within the speech marks (e.g. example.html, or https:example.com).</div>
+		<span>Also by putting the title attribute, you can display some text when you hover over the link</span>
+		<a href="https://github.com/jhu-ep-coursera/fullstack-course4" title="Just so I don't lose the link to this...">like this</a>
+		<span>. If you were wondering what that link is to, its just the GitHub page for all the resources shown within the course.</span>
+		<div>
+			Somehow, I unexpectedly learnt the use of the id attribute, which is unique for each tag, and that is literally the reason for its existence...
+			To link to sections within the same document, all of the sections you want to link to must have a unique id attribute. DO THAT FIRST. Then, instead of links within the href attribute, add a &num; and then immediately follow with the id. And voil&agrave;, it should work.
+		</div>
+		<div>Completely forget about this. But then again, I just rememebred. To force the browser to open the link on a new tab, use the target attribute, and add "_blank".</div>
+		<div>Following this lesson, I've gone and made a contents section with links to all of the sections within the document relating to the different topics. Also added a "back to top" link at the bottom.</div>
+	</section>
+	
+	<br>
 	<br>
 	<br>
 	<br>
@@ -89,6 +126,9 @@
 	<aside>
 		Not gonna lie, the instructor could've made a more hands-on approach but it's fun nonetheless...
 		<span> Also, learnt this on lecture 06~</span>
+		<a href="#top" title="I know you're lost~">
+			<div>Back to the top of the page</div>
+		</a>
 	</aside>
 	
 </body>
