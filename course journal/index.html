@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Learning HTML from Coursera</title>
+	<header>
+		Just started to learn how to code from scratch... Officially started on 11 Feb 23
+	</header>
+</head>
+<body>
+	<h1 id="top">Learning HTML from Coursera</h1>
+	<h3>My journey so far on the Coursera (course) on HTML, CSS and JavaScript</h3>
+	
+	<br>
+	
+	<section>
+		<h2>Contents:</h2>
+		<ul>
+			<li><a href="#lecture5">Div and span elements</a></li>
+			<li><a href="#lecture7">Semantic elements</a></li>
+			<li><a href="#lecture7">Lists</a></li>
+			<li><a href="#lecture8">HTML character entity references</a></li>
+			<li><a href="#lecture9">Links</a></li>
+			<li><a href="#lecture10">Images</a></li>
+		</ul>
+	</section>
+	
+	<br>
+	
+	<section id="lecture5">
+		<h2>Think this was Lecture 05 - on div and span elements</h2>
+		<div>Learnt about div tags and <span>span tags as well.</span>
+		Hopefully I'm learning something about it...</div>
+		<div>The div tags are used for block content- meaning that it must be on a line on its own 
+		<span>(unless there's a span tag)</span>
+		- which now roughly translates to the current flow content. Whereas the span tags are for in-line content, now roughly equating to the phrasing content.
+		</div>
+		<aside>Note: The words "tag" and "element" mean the same thing and can be used interchangeably.</aside> 
+	</section>
+	
+	<br>
+	
+	<section id="lecture6">
+		<h2>Something on semantic elements - Lecture 06 if I had to guess</h2>
+		<div>Semantic means something that adds to something else to ADD more informaion or logic...</div>
+		<div>Also learnt about the article element.</div>
+		<div>ALSO learnt about the section element, and now have formatted eveything to include sections to make HTML neater and more presentable.</div>
+		<aside>
+			Note: Made former article tags on lines 31-33 turn into div tags - because you need a header tag within it to be a proper article. What W3C says about it:
+					"The article element should make sense on its own and it should be possible to distribute it independently from the rest of the site."
+		</aside>
+	</section>
+	
+	<br>
+	
+	<section id="lecture7">
+		<h2> Different kinds of lists - Lecture 7</h2>
+		<div>For unordered lists, you must use the ul tag(just means Unordered List), and for everything you put inside of it, you add the li tag.</div>
+		<div> So, for example, here are the reasons why you should join the course I've enrolled in:
+			<ul>
+				<li>Its free</li>
+				<li>It's a step-by-step process for all beginners in:
+					<ul>
+						<li>Hyper-Text Markup Language</li>
+						<li>Cascading Style Sheets</li>
+						<li>JavaScript</li>
+					</ul>
+				</li>
+				<li>It has good reviews...</li> <!-- I definitely did not have a gun to my head while writing this part... -->
+			</ul>
+		</div>
+		<div>You can also make ordered lists with the ol tag. It's basically the same formatting and code like the unordered lists, but it puts stuff in a specific ORDER(1, 2, 3, etc.). Don't forget to put the li tag within...
+		</div>
+	</section>
+		
+	<br>
+		
+	<section id="lecture8">
+		<h2>Probably lecture 8 because the last thing I did was lecture 7 - HTML character entity references</h2>
+		<div>So in HTML, you weirdly can't use some characters you could usually use on your keyboard
+		<span>(like "greater than", "less than" and "and" symbols)</span>
+		So you are forced to use codes in order to denote these symbols.
+		<span> (Also used for stuff which isn't on the reglar everyday keyboard, like the &copy; symbol.)</span> 
+		</div>
+		<div>Here are the CHARACTER ENTITY REFERENCES you need to know for the more common stuff:
+			<ul>
+				<li>&lt; -- &amp; l t ;</li>
+				<li>&gt; -- &amp; g t ;</li>
+				<li>&amp; -- &amp; a m p ;</li>
+				<li>&copy; -- &amp; c o p y ;</li>
+			</ul>
+			<aside>Note: If you put these characters together, it would create the desired symbol, so I spaced them out so that didn't happen. When actually coding, remember to put these together.</aside>
+		</div>
+		<div> Also found out about character reference to wrap text together (essentially meaning that the words will always stay together even if you shrink the page). Could use this to link words with special meaning together. In order to do so, take away the space between the words and add "&amp;&nbsp;n&nbsp;b&nbsp;s&nbsp;p&nbsp;;".</div>
+	</section>
+	
+	<br>
+	
+	<section id="lecture9">
+		<h2> Lecture 9 - on creating links (its TOO much)</h2>
+		<div> So I learnt how to make links to various places - and it still hurts my mind thinking about it.</div>
+		<div>You can:
+			<ul>
+				<li>Link to other pages wthin the same site (internal links)</li>
+				<li>Link to other websites (external links)</li>
+				<li>Link to sections withing the same document</li>
+			</ul>
+		</div>
+		<div>To link, you need to use the a element (meaning anchor) with the href attribute and an equals sign next to it. Then add speech marks and put the name of the file or external website url within the speech marks (e.g. example.html, or https:example.com).</div>
+		<span>Also by putting the title attribute, you can display some text when you hover over the link</span>
+		<a href="https://github.com/jhu-ep-coursera/fullstack-course4" title="Just so I don't lose the link to this...">like this</a>
+		<span>. If you were wondering what that link is to, its just the GitHub page for all the resources shown within the course.</span>
+		<div>
+			Somehow, I unexpectedly learnt the use of the id attribute, which is unique for each tag, and that is literally the reason for its existence...
+			To link to sections within the same document, all of the sections you want to link to must have a unique id attribute. DO THAT FIRST. Then, instead of links within the href attribute, add a &num; and then immediately follow with the id. And voil&agrave;, it should work.
+		</div>
+		<div> Someone told me that links are like building bridges ;) <img src="linkingbridges.jpg" height="164" width="306"></div>
+		<div>Completely forget about this. But then again, I just rememebred. To force the browser to open the link on a new tab, use the target attribute, and add "_blank".</div>
+		<div>Following this lesson, I've gone and made a contents section with links to all of the sections within the document relating to the different topics. Also added a "back to top" link at the bottom.</div>
+	</section>
+	
+	<br>
+	
+	<section id="lecture10">
+		<h2>Images... Almost done with the basics - lecture 10</h2>
+		<div>So basically as the title says, it's just adding images.</div>
+		<!-- Also taught how to add comments which are not seen in the actual markup... Just copy this! -->
+		<div> For that to happen, use img tag (no closing tag needed) then add the src attribute, and then the name of the image file or image link (both work).</div>
+		<div>Also he recommended to specify dimensions through the height and width attributes (lengths are in pixels... not mm or cm!).</div>
+		<div>This is basically how you do it:</div>
+		<img src="thinkinboutthinkin.jpg" height="665" width="521">
+		<div>Can also add alt attribute for the "visually impaired"... If they were visually impaired, they wouldn't be able to see it in the first place!</div>
+	</section>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<aside>
+		Not gonna lie, the instructor could've made a more hands-on approach but it's fun nonetheless...
+		<span> Also, learnt this on lecture 06~</span>
+		<a href="#top" title="I know you're lost~">
+			<div>Back to the top of the page</div>
+		</a>
+	</aside>
+	
+</body>
+</html>
