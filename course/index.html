@@ -3,13 +3,54 @@
 <head>
 	<meta charset="utf-8">
 	<title>Learning HTML from Coursera</title>
-	<header>
+	<header class="header">
 		Just started to learn how to code from scratch... Officially started on 11 Feb 23
 	</header>
+	<style>
+		h1 {
+		color: black;
+		font: 40px;
+		font-weight: bold;
+		text-align: center;
+		}
+		
+		h2 {
+		color: black;
+		font: 30px;
+		font-weight: bold;
+		text-align: center;
+		}
+		
+		section {
+		color: black;
+		font: 20px;
+		text-align: left;
+		}
+		
+		aside {
+		color: black;
+		font: 20px;
+		text-align: left;
+		}
+		
+		.brief {
+		color: #36454F;
+		font: 25px;
+		text-align: center;
+		}
+		
+		.header { color: #36454F; }
+		
+		.linx {
+		font: 25px;
+		text-align: center;
+		}
+		
+	</style>
 </head>
 <body>
 	<h1 id="top">Learning HTML from Coursera</h1>
-	<h3>My journey so far on the Coursera (course) on HTML, CSS and JavaScript</h3>
+	<h3 class="brief">My journey so far on the Coursera (course) on HTML, CSS and JavaScript</h3>
 	
 	<br>
 	
@@ -22,6 +63,7 @@
 			<li><a href="#lecture8">HTML character entity references</a></li>
 			<li><a href="#lecture9">Links</a></li>
 			<li><a href="#lecture10">Images</a></li>
+			<li><a href="#lecture1213">Intro into CSS</a></li>
 		</ul>
 	</section>
 	
@@ -57,7 +99,7 @@
 		<h2> Different kinds of lists - Lecture 7</h2>
 		<div>For unordered lists, you must use the ul tag(just means Unordered List), and for everything you put inside of it, you add the li tag.</div>
 		<div> So, for example, here are the reasons why you should join the course I've enrolled in:
-			<ul>
+			<ol>
 				<li>Its free</li>
 				<li>It's a step-by-step process for all beginners in:
 					<ul>
@@ -67,7 +109,7 @@
 					</ul>
 				</li>
 				<li>It has good reviews...</li> <!-- I definitely did not have a gun to my head while writing this part... -->
-			</ul>
+			</ol>
 		</div>
 		<div>You can also make ordered lists with the ol tag. It's basically the same formatting and code like the unordered lists, but it puts stuff in a specific ORDER(1, 2, 3, etc.). Don't forget to put the li tag within...
 		</div>
@@ -128,8 +170,24 @@
 		<div> For that to happen, use img tag (no closing tag needed) then add the src attribute, and then the name of the image file or image link (both work).</div>
 		<div>Also he recommended to specify dimensions through the height and width attributes (lengths are in pixels... not mm or cm!).</div>
 		<div>This is basically how you do it:</div>
-		<img src="thinkinboutthinkin.jpg" height="665" width="521">
+		<img src="thinkinboutthinkin.jpg" height="497.75" width="390.75">
 		<div>Can also add alt attribute for the "visually impaired"... If they were visually impaired, they wouldn't be able to see it in the first place!</div>
+	</section>
+	
+	<br>
+	
+	<section id="lecture1213">
+		<h2>A combination of Lectures 12 and 13 on CSS basics</h2>
+		<div>Lecture 12 just introduced CSS and the style tag. Basically goes deep into the building blocks behind a CSS rule.</div>
+		<div>Lecture 13 goes in-depth about the different CSS selectors: element, class and id.
+		<ul>
+			<li>Element selector makes it so that all of one type of element has the same CSS rule. So in the style tag, if I write div, put some curly brackets, and put CSS in it, it will change the style for all of the div tags.</li>
+			<li>Class selector allows you to write a class (almost like an id) and then add class attribute on a tag. To do that, do the same as the element selector, but instead of a tag, add a full stop (.) and write the name of the class - it can be anything you want it to be.</li>
+			<li>For id selectors, it's basically the same as the class selector (except instead of the class, you add the specific id).</li>
+		<ul>
+		</div>
+		<div>Also, you can stack CSS styles. So, one CSS rule can be attributed to any combination of class, id and element selctors.</div>
+		<aside>Note: Updated some things with some CSS.</aside>
 	</section>
 	
 	<br>
@@ -141,7 +199,7 @@
 	<aside>
 		Not gonna lie, the instructor could've made a more hands-on approach but it's fun nonetheless...
 		<span> Also, learnt this on lecture 06~</span>
-		<a href="#top" title="I know you're lost~">
+		<a href="#top" class="linx" title="I know you're lost~">
 			<div>Back to the top of the page</div>
 		</a>
 	</aside>
