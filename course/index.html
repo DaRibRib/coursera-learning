@@ -27,7 +27,7 @@
 		text-align: left;
 		}
 		
-		aside {
+		section aside {
 		color: black;
 		font: 20px;
 		text-align: left;
@@ -64,6 +64,7 @@
 			<li><a href="#lecture9">Links</a></li>
 			<li><a href="#lecture10">Images</a></li>
 			<li><a href="#lecture1213">Intro into CSS</a></li>
+			<li><a href="#lecture14">Combining selectors</a></li>
 		</ul>
 	</section>
 	
@@ -191,6 +192,65 @@
 	</section>
 	
 	<br>
+	
+	<section id="lecture14">
+		<h2>Lecture 14 - Combining selectors (drastically more complex)</h2>
+		<!-- Honestly this took me so long to understand... I probably still can't wrap my head around it -->
+		<span>
+			<s>This was very confusing so... I just screenshotted the slides with all the relevant information.</s>
+			I was tempted to do that, but it didn't look good. Anyways because this stuff is so complex, I've added example codes in the comments for each section. 
+		</span>
+		<br>
+		<div style="font-weight: bold;">Element with Class Selector</div>
+			<span>
+				Let's say we had the class bold and the element span. If we wanted to style only every span element with the bold class, first type span and immediately follow it up with .bold without a space. And after you finish up the style sheet, every span element with the bold class should have the desired style.
+			</span>
+			<!--  Example code:
+					span.bold {font-weight: bold;}
+				
+					<span class="bold">...</span>	Would work
+				<div class="bold">...</div>	Would not work
+			-->
+		<br>
+		<div style="font-weight: bold;">Child Selector</div>
+			<span>
+				Let's say we only wanted to style span elements within another element (let's say the section element), and only when the span element is a direct child of the section element. First type the parent element (the section element) and add a space; after add a greater than (&gt;) and another space, followed by the child element (span). In this case, the span element will only have the certain styling when it is the direct child of the section element, so, if the span element is within the section element but also is directly enclosed by another element (for example p) it will not work.
+			</span>
+			<!--  Example code:
+					section > span {color: white;}
+				
+					<section>
+					<span>...</span>	Would work
+					<p><span>...</span></p>	Would not work
+					</section>
+			-->
+		<br>
+		<div style="font-weight: bold;">Descendant Selector</div>
+			<span>
+				Let's fix the predicament from the last one. If we wanted to style every span element that is inside (at any level) of the section element, first type the parent element (for this scenario, the section element) and add a space, directly follow this through with the descendant element (span). In this case, the spn element will always have that styling when it is a descendant of the section element.
+			</span>
+			<!--  Example code:
+					section span {color: white;}
+				
+					<section>
+					<span>...</span>	Would work
+					<p><span>...</span></p>		Would work
+			-->
+		<br>
+		<div>Finally, the last two are not limted to element sectors, as they can also work for class sectors. (See comments for more info)</div>
+		<!-- Example code:
+			
+			Every element with class="colored" that is a direct child of the article element:
+				
+				article > .coloured {color: blue;}
+			
+			Every p that is inside (at any level) an element with class="colored"
+			
+				.coloured p {color: blue;}
+				
+		-->
+	</section>
+	
 	<br>
 	<br>
 	<br>
