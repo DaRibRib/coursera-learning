@@ -7,18 +7,23 @@
 		Just started to learn how to code from scratch... Officially started on 11 Feb 23
 	</header>
 	<style>
+		html {
+		font-family: Helvetica;
+		}
+		
 		h1 {
 		color: black;
 		font: 40px;
 		font-weight: bold;
 		text-align: center;
+		text-decoration: underline;
 		}
 		
-		h2 {
+		section > h2 {
 		color: black;
 		font: 30px;
 		font-weight: bold;
-		text-align: center;
+		text-align: left;
 		}
 		
 		section {
@@ -41,9 +46,20 @@
 		
 		.header { color: #36454F; }
 		
-		.linx {
+		header li {
+		list-style: none;
 		font: 25px;
-		text-align: center;
+		}
+		
+		a:link, a:visited {
+		text-decoration: none;
+		font-weight: bold;
+		color: #36454F;
+		}
+		
+		a:hover, a:active {
+		background-color: #D3D3D3;
+		color: #F4F4F4;
 		}
 		
 	</style>
@@ -54,7 +70,7 @@
 	
 	<br>
 	
-	<section>
+	<header>
 		<h2>Contents:</h2>
 		<ul>
 			<li><a href="#lecture5">Div and span elements</a></li>
@@ -65,8 +81,9 @@
 			<li><a href="#lecture10">Images</a></li>
 			<li><a href="#lecture1213">Intro into CSS</a></li>
 			<li><a href="#lecture14">Combining selectors</a></li>
+			<li><a href="#lecture15">Pseudo-class selectors</a></li>
 		</ul>
-	</section>
+	</header>
 	
 	<br>
 	
@@ -227,7 +244,7 @@
 		<br>
 		<div style="font-weight: bold;">Descendant Selector</div>
 			<span>
-				Let's fix the predicament from the last one. If we wanted to style every span element that is inside (at any level) of the section element, first type the parent element (for this scenario, the section element) and add a space, directly follow this through with the descendant element (span). In this case, the spn element will always have that styling when it is a descendant of the section element.
+				Let's fix the predicament from the last one. If we wanted to style every span element that is inside (at any level) of the section element, first type the parent element (for this scenario, the section element) and add a space, directly follow this through with the descendant element (span). In this case, the span element will always have that styling when it is a descendant of the section element.
 			</span>
 			<!--  Example code:
 					section span {color: white;}
@@ -252,6 +269,34 @@
 	</section>
 	
 	<br>
+	
+	<section id="lecture15">
+		<h2>Lecture 15 - Pseudo-class selectors</h2>
+		<div>I had to look over this a ouple of times because... the instructor didn't really say much about what they were or what they were used for. But I was able to scavenge for some information about it.</div>
+		<span>To use one of these, you must type it in the form: 
+			<i>selector:pseudo-class</i>
+			.
+		</span>
+		<div>
+			The first two pseudo-classes I learnt are link and visited. They are both usually used in tandem like I did up in the style element. Link refers to the links in the page, and provides a style to all links. Visited means that HTML allows that after you click a particular link, a different style can be applied to that link rather than being the same as an unclicked link. In our case, however, we don't want to differntiate between the two, so we'll style them together.
+		</div>
+		<div>
+			Another 2 pseudo-classes we're using together - hover and active. Hover (literally does what it is) provides a style for the class as it is hovered over. In our case, it is the links.An active is that state when the user actually clicks on the element but hasn't yet released his click; this also has a separate style.
+		</div>
+		<span>
+			And the most complex one... The nth child pseudo-class. To use this, type the class and add <i>:nth-child()</i> without a space. Let's say we have 9 li tags in the contents section. With this pseudo-class, we can specify which of these 9 li tags we want to make different. If we&nbsp;wanted to changed only the 3rd li tag, just put 3 in the brackets and type the style in the same way you would do for the others - with curly brackets. If you wanted the odd of even numbered li tags to have a certain style, just put odd or even in the brackets.
+		</span>
+		<aside>Note: Added some of these pseudo-classes for the links.</aside>
+		<!-- Look at this genius bit of code I brainstormed:
+			<style>
+			section:hover .boldhover {
+			font-weight: bold;
+			}
+			</style>
+		-->
+	</section>
+	
+	<br>
 	<br>
 	<br>
 	<br>
@@ -259,10 +304,12 @@
 	<aside>
 		Not gonna lie, the instructor could've made a more hands-on approach but it's fun nonetheless...
 		<span> Also, learnt this on lecture 06~</span>
-		<a href="#top" class="linx" title="I know you're lost~">
-			<div>Back to the top of the page</div>
+		<a href="#top" title="I know you're lost~">
+			<div style="font: 25px; text-align: center;">Back to the top of the page</div>
 		</a>
 	</aside>
+	
+	<br>
 	
 </body>
 </html>
