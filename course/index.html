@@ -46,6 +46,8 @@
 		
 		.header { color: #36454F; }
 		
+		.boldtext {font-weight: bold;}
+		
 		header li {
 		list-style: none;
 		font: 25px;
@@ -82,6 +84,7 @@
 			<li><a href="#lecture1213">Intro into CSS</a></li>
 			<li><a href="#lecture14">Combining selectors</a></li>
 			<li><a href="#lecture15">Pseudo-class selectors</a></li>
+			<li><a href="#lecture16">Style Placements</a></li>
 		</ul>
 	</header>
 	
@@ -218,7 +221,7 @@
 			I was tempted to do that, but it didn't look good. Anyways because this stuff is so complex, I've added example codes in the comments for each section. 
 		</span>
 		<br>
-		<div style="font-weight: bold;">Element with Class Selector</div>
+		<div class="boldtext">Element with Class Selector</div>
 			<span>
 				Let's say we had the class bold and the element span. If we wanted to style only every span element with the bold class, first type span and immediately follow it up with .bold without a space. And after you finish up the style sheet, every span element with the bold class should have the desired style.
 			</span>
@@ -229,7 +232,7 @@
 				<div class="bold">...</div>	Would not work
 			-->
 		<br>
-		<div style="font-weight: bold;">Child Selector</div>
+		<div class="boldtext">Child Selector</div>
 			<span>
 				Let's say we only wanted to style span elements within another element (let's say the section element), and only when the span element is a direct child of the section element. First type the parent element (the section element) and add a space; after add a greater than (&gt;) and another space, followed by the child element (span). In this case, the span element will only have the certain styling when it is the direct child of the section element, so, if the span element is within the section element but also is directly enclosed by another element (for example p) it will not work.
 			</span>
@@ -242,7 +245,7 @@
 					</section>
 			-->
 		<br>
-		<div style="font-weight: bold;">Descendant Selector</div>
+		<div class="boldtext">Descendant Selector</div>
 			<span>
 				Let's fix the predicament from the last one. If we wanted to style every span element that is inside (at any level) of the section element, first type the parent element (for this scenario, the section element) and add a space, directly follow this through with the descendant element (span). In this case, the span element will always have that styling when it is a descendant of the section element.
 			</span>
@@ -252,6 +255,7 @@
 					<section>
 					<span>...</span>	Would work
 					<p><span>...</span></p>		Would work
+					</section>
 			-->
 		<br>
 		<div>Finally, the last two are not limted to element sectors, as they can also work for class sectors. (See comments for more info)</div>
@@ -284,7 +288,7 @@
 			Another 2 pseudo-classes we're using together - hover and active. Hover (literally does what it is) provides a style for the class as it is hovered over. In our case, it is the links.An active is that state when the user actually clicks on the element but hasn't yet released his click; this also has a separate style.
 		</div>
 		<span>
-			And the most complex one... The nth child pseudo-class. To use this, type the class and add <i>:nth-child()</i> without a space. Let's say we have 9 li tags in the contents section. With this pseudo-class, we can specify which of these 9 li tags we want to make different. If we&nbsp;wanted to changed only the 3rd li tag, just put 3 in the brackets and type the style in the same way you would do for the others - with curly brackets. If you wanted the odd of even numbered li tags to have a certain style, just put odd or even in the brackets.
+			And the most complex one... The nth child pseudo-class. To use this, type the class and add <i>:nth-child()</i> without a space. Let's say we have 9 li tags in the contents section. With this pseudo-class, we can specify which of these 9 li tags we want to make different. If we&nbsp;wanted to change only the 3rd li tag, just put 3 in the brackets and type the style in the same way you would do for the others - with curly brackets. If you wanted the odd of even numbered li tags to have a certain style, just put odd or even in the brackets.
 		</span>
 		<aside>Note: Added some of these pseudo-classes for the links.</aside>
 		<!-- Look at this genius bit of code I brainstormed:
@@ -294,6 +298,73 @@
 			}
 			</style>
 		-->
+	</section>
+	
+	<br>
+	
+	<section id="lecture16">
+		<h2>Style Placements is Lecture 16</h2>
+		<aside>Note: I've already learnt most of this topic but I'll add it in here just for remembrance sake.</aside>
+		<div class="boldtext">Style Attribute within Elements</div>
+			<div>
+				Another way you can style individual elements without having everything the same style, is by using the style attribute. I've already done this multiple times before. Just write style= and ,in quotation marks, add the specific style you want, just like you do in the style element. However, this is quite ineffective if you're trying to create a whole new website, as you will have to do everything separately.
+			</div>
+		<div class="boldtext">External Style Sheets</div>
+			<span>
+				The other way to make styles is by using an external style sheet. This is used by almost all large and well-crafted websites; this is where you link the CSS of one HTML file to a style sheet in a CSS file. A great example of external style sheets is the instructor's use of <a href="https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/examples/Lecture16/style.css">style.css</a> to cahnge the style the HTML file <a href="https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/examples/Lecture16/style-placement.html">style-placement.html</a> .
+			</span>
+			<div> To create this, all you have to do is just create a separate CSS file with all of the code of every style you want on your website. then use the link tag and add the rel attribute by typing rel="stylesheet" and add the href attribute to link in the external stylesheet (for example, href="style.css"). However, you MUST make sure that the CSS file is in the same directory as the HTML file. </div>   
+	</section>
+	
+	<br>
+	
+	<section id="lecture17">
+		<h2> Lecture 17 - I think- on Resolving Conflicts</h2>
+		<div>Even though I said this earlier, this is by far the most complex thing I've learnt...</div>
+		<div> This is basically about the figuring out which style is going to be shown when there are 2 or more CSS styles being used for the same element/text.</div>
+		<ol>
+			<li>
+				<span class="boldtext">Origin Precedence</span>
+				<ul>
+					<li>When in conflict:
+						Remember that, an HTML page is read sequentially from top to bottom. When there are two different specified styles for an element, the declaration at the bottom wins. For external stylesheets, consider it to be at the position of the declaration of the stylesheet.
+					</li>
+					<li>When not in conflict:
+						When there are two different declarations for the same element but they focus on different attributes, the styles simply merge, and the element displays properties of both the declarations. In fact, whenever two declarations are not in conflict with each other, they merge.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="boldtext">Inheritance</span>
+				<ul>
+					<li>
+						A child element always inherits the styles of the parent element, unless declared otherwise separately. Even here, if the declarations are not in conflict, they simply merge.
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="boldtext">Specificity</span>
+				<ul>
+					<li>
+						When two different selectors are used but both select the same element, the precedence is decided by specificity rules. We can think of the specificity of an element as a 4-digit number, and the greater number wins. The number is found in the following way:
+						<ol>
+							<li>The thousands digit denotes the presence of inline styles.</li>
+							<li>The hundreds digit denotes the number of IDs specified in the declaration.</li>
+							<li>The tens digit denotes the number of classes (or pseudo-classes) specified in the declaration.</li>
+							<li>The one's digit denotes the number of HTML tags specified in the declaration.</li>
+						</ol>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<span class="boldtext">!Important</span>
+				<ul>
+					<li>
+						When you use !important with a style, it bypasses all the rules and sets the style defined by that selector.
+					</li>
+				</ul>
+			</li>
+		</ol>
 	</section>
 	
 	<br>
