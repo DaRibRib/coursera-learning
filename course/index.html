@@ -8,7 +8,7 @@
 	</header>
 	<style>
 		html {
-		font-family: Helvetica;
+		font-family: Helvetica, Arial, sans-serif;
 		}
 		
 		h1 {
@@ -84,7 +84,9 @@
 			<li><a href="#lecture1213">Intro into CSS</a></li>
 			<li><a href="#lecture14">Combining selectors</a></li>
 			<li><a href="#lecture15">Pseudo-class selectors</a></li>
-			<li><a href="#lecture16">Style Placements</a></li>
+			<li><a href="#lecture16">Style placements</a></li>
+			<li><a href="#lecture17">Resolving conflicts</a></li>
+			<li><a href="#lecture18">Styling text</a></li>
 		</ul>
 	</header>
 	
@@ -365,6 +367,31 @@
 				</ul>
 			</li>
 		</ol>
+	</section>
+	
+	<br>
+	
+	<section id="lecture18">
+		<h2>Lecture 18 - Styling text</h2>
+		<aside>By far the easiest yet... We pretty much learnt this all before :)</aside>
+		<div> 
+			There are many ways you can style fonts using CSS. These styles can help change up your website to make it more readable and interesting. I think I've learnt about most of these (he says while scratching his head) so I won't go into much detail about these. Just some CSS styles that moght be good to know are:
+			<ul>
+				<li style="font-style:italic;">font-family</li>
+				<li style="font-style:italic;">color (should try to get used to using hex codes)</li>
+				<li style="font-style:italic;">font-style</li>
+				<li style="font-style:italic;">font-weight</li>
+				<li style="font-style:italic;"> font-size (usually in pixels, but can sometimes be in a percentage or in ems - I'll explain this in depth later)</li>
+			</ul>
+			If you need to find out any other specific CSS styles you want to implement, or are just looking for an in-depth explanation on them, just go to <a href="https://www.w3schools.com/css/default.asp" title="Look no further...">the CSS section of the w3schools website</a> for more info.
+		</div>
+		<div> As I said earlier, you can not only display font sizes based on pixels, but also based on relative amounts. You can also determine the font size based on a percentage. If I wrote that <i>font-size:120%</i> it would mean that the font size should be 20% larger than the default of the browser. For example, if the browser default was 20px, with the 120% font size, it would now be 25px.</div>
+		<div> 
+			An em is a unit of measurement that is equivalent to the width of the letter m in this particular font that we're using. 
+			<!-- It sounds a little bit confusing at first, but the bottom line is it's a relative size. It's relative to something. Relative size allows you to set the font size relative to the parent element. This means that different text with the same (relative) value could actually appear in many different sizes - even on the same page. -->
+			So if we specifically write that <i>font-size:2em</i>, the font size will be twice the current size of the font - so if it is 120% originally, with the 2em font size, it will be 240%. If there is a child element of that text, its font size will also be 2em, but if you want to bring it back to the original size, you will have to half the 2em in the new tag by making the font size in that tag as 0.5em.
+		</div>
+		<!-- This bit may seems a little complex at first, but trust me, you'll get it :) -->
 	</section>
 	
 	<br>
