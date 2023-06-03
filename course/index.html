@@ -11,6 +11,14 @@
 		font-family: Helvetica, Arial, sans-serif;
 		}
 		
+		* {
+		box-sizing: border-box;
+		}
+		
+		body {
+		margin: 0px 25px 0px 25px
+		}
+		
 		h1 {
 		color: black;
 		font: 40px;
@@ -42,6 +50,10 @@
 		color: #36454F;
 		font: 25px;
 		text-align: center;
+		margin: auto;
+		padding: 1px;
+		border: 3px solid #36454F;
+		width: 808px;
 		}
 		
 		.header { color: #36454F; }
@@ -87,6 +99,7 @@
 			<li><a href="#lecture16">Style placements</a></li>
 			<li><a href="#lecture17">Resolving conflicts</a></li>
 			<li><a href="#lecture18">Styling text</a></li>
+			<li><a href="#lecture19">Box model</a></li>
 		</ul>
 	</header>
 	
@@ -179,7 +192,7 @@
 			Somehow, I unexpectedly learnt the use of the id attribute, which is unique for each tag, and that is literally the reason for its existence...
 			To link to sections within the same document, all of the sections you want to link to must have a unique id attribute. DO THAT FIRST. Then, instead of links within the href attribute, add a &num; and then immediately follow with the id. And voil&agrave;, it should work.
 		</div>
-		<div> Someone told me that links are like building bridges ;) <img src="linkingbridges.jpg" height="164" width="306"></div>
+		<div> Someone told me that links are like building bridges ;) <img src="linkingbridges.jpg" height="164" width="306" alt="Image of bridges"></div>
 		<div>Completely forget about this. But then again, I just rememebred. To force the browser to open the link on a new tab, use the target attribute, and add "_blank".</div>
 		<div>Following this lesson, I've gone and made a contents section with links to all of the sections within the document relating to the different topics. Also added a "back to top" link at the bottom.</div>
 	</section>
@@ -193,7 +206,7 @@
 		<div> For that to happen, use img tag (no closing tag needed) then add the src attribute, and then the name of the image file or image link (both work).</div>
 		<div>Also he recommended to specify dimensions through the height and width attributes (lengths are in pixels... not mm or cm!).</div>
 		<div>This is basically how you do it:</div>
-		<img src="thinkinboutthinkin.jpg" height="497.75" width="390.75">
+		<img src="thinkinboutthinkin.jpg" height="497.75" width="390.75" alt="Image of stickman thinking about coding images">
 		<div>Can also add alt attribute for the "visually impaired"... If they were visually impaired, they wouldn't be able to see it in the first place!</div>
 	</section>
 	
@@ -385,6 +398,7 @@
 			</ul>
 			If you need to find out any other specific CSS styles you want to implement, or are just looking for an in-depth explanation on them, just go to <a href="https://www.w3schools.com/css/default.asp" title="Look no further...">the CSS section of the w3schools website</a> for more info.
 		</div>
+		<br>
 		<div> As I said earlier, you can not only display font sizes based on pixels, but also based on relative amounts. You can also determine the font size based on a percentage. If I wrote that <i>font-size:120%</i> it would mean that the font size should be 20% larger than the default of the browser. For example, if the browser default was 20px, with the 120% font size, it would now be 25px.</div>
 		<div> 
 			An em is a unit of measurement that is equivalent to the width of the letter m in this particular font that we're using. 
@@ -392,6 +406,33 @@
 			So if we specifically write that <i>font-size:2em</i>, the font size will be twice the current size of the font - so if it is 120% originally, with the 2em font size, it will be 240%. If there is a child element of that text, its font size will also be 2em, but if you want to bring it back to the original size, you will have to half the 2em in the new tag by making the font size in that tag as 0.5em.
 		</div>
 		<!-- This bit may seems a little complex at first, but trust me, you'll get it :) -->
+	</section>
+	
+	<br>
+	
+	<section id="lecture19">
+		<h2>Lecture 19 on the Box Model</h2>
+		<div>
+			The box model is basically a box that wraps around any given element. The box model consists of 4 distinct sections: the content, padding, border and margin.
+			<ul>
+				<li>The <span class="boldtext">content</span> is where text and images appear</li>
+				<li>The <span class="boldtext">padding</span> clears an area around the content</li>
+				<li>The <span class="boldtext">border</span> is the BORDER of the padding and content</li>
+				<li>The <span class="boldtext">margin</span> clears an area outside the border</li>
+			</ul>
+			We can use these terms to define the height and width of a certain element by saying how large the sections should be, in PIXELS. It can also be used to give distinct colours to it, like the colour of the border.
+		</div>
+		<img src="box_model.jpg" height="194px" width="241px" alt="Image of Box Model">
+		<div>
+			Also learnt that when you are specifying dimensions for each of the sections (other than content), you have to write the number of pixels on each side from top to left clockwise - so top, right, bottom, then left. For example, <i>padding: 10px 10px 10px 10px;</i> which an also be written as <i>padding: 10px;</i>.
+		</div>
+		<span>
+			Instructor also recommends that when you're messing about with box model, you should always set <i>box-sizing: border-box;</i> so when you specify the width of the element, it will factor in the width and height of the box sections; so basically <span class="boldtext">written width/height - (2 &times; the sum of the specified width/height of the padding, border and margin) = width/height of content.</span>
+		</span>
+		<div>Also randomly learnt about &ast; selector...</div>
+		<div>
+		Finally, I also learnt about the overflow CSS style, which can be used when the text withing the element OVERFLOWS the dimensions of the box it is put in. By using overflow, you can make the text that is going past the box visible, hidden, or add scroll bars to scroll down to read the text.
+		</div>
 	</section>
 	
 	<br>
