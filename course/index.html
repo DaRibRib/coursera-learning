@@ -100,6 +100,8 @@
 			<li><a href="#lecture17">Resolving conflicts</a></li>
 			<li><a href="#lecture18">Styling text</a></li>
 			<li><a href="#lecture19">Box model</a></li>
+			<li><a href="#lecture22">Relative and absolute element positioning</a></li>
+			<li><a href="#lecture23">Media Queries</a></li>
 		</ul>
 	</header>
 	
@@ -326,7 +328,7 @@
 			</div>
 		<div class="boldtext">External Style Sheets</div>
 			<span>
-				The other way to make styles is by using an external style sheet. This is used by almost all large and well-crafted websites; this is where you link the CSS of one HTML file to a style sheet in a CSS file. A great example of external style sheets is the instructor's use of <a href="https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/examples/Lecture16/style.css">style.css</a> to cahnge the style the HTML file <a href="https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/examples/Lecture16/style-placement.html">style-placement.html</a> .
+				The other way to make styles is by using an external style sheet. This is used by almost all large and well-crafted websites; this is where you link the CSS of one HTML file to a style sheet in a CSS file. A great example of external style sheets is the instructor's use of <a href="https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/examples/Lecture16/style.css">style.css</a> to change the style the HTML file <a href="https://github.com/jhu-ep-coursera/fullstack-course4/blob/master/examples/Lecture16/style-placement.html">style-placement.html</a> .
 			</span>
 			<div> To create this, all you have to do is just create a separate CSS file with all of the code of every style you want on your website. then use the link tag and add the rel attribute by typing rel="stylesheet" and add the href attribute to link in the external stylesheet (for example, href="style.css"). However, you MUST make sure that the CSS file is in the same directory as the HTML file. </div>   
 	</section>
@@ -427,11 +429,53 @@
 			Also learnt that when you are specifying dimensions for each of the sections (other than content), you have to write the number of pixels on each side from top to left clockwise - so top, right, bottom, then left. For example, <i>padding: 10px 10px 10px 10px;</i> which an also be written as <i>padding: 10px;</i>.
 		</div>
 		<span>
-			Instructor also recommends that when you're messing about with box model, you should always set <i>box-sizing: border-box;</i> so when you specify the width of the element, it will factor in the width and height of the box sections; so basically <span class="boldtext">written width/height - (2 &times; the sum of the specified width/height of the padding, border and margin) = width/height of content.</span>
+			Instructor also recommends that when you're messing about with box model, you should always set <i>box-sizing: border-box;</i> so when you specify the width of the element, it will factor in the width and height of the box sections; so basically <span class="boldtext">written&nbsp;width/height&nbsp;-&nbsp;(2 &times; the sum of the specified width/height of the padding, border and margin)&nbsp;=&nbsp;width/height&nbsp;of&nbsp;content.</span>
 		</span>
 		<div>Also randomly learnt about &ast; selector...</div>
 		<div>
 		Finally, I also learnt about the overflow CSS style, which can be used when the text withing the element OVERFLOWS the dimensions of the box it is put in. By using overflow, you can make the text that is going past the box visible, hidden, or add scroll bars to scroll down to read the text.
+		</div>
+	</section>
+	
+	<br>
+	
+	<section id="lecture22">
+		<h2>Skipped a few... But this is Lecture 22 on Relative and Absolute Element Positioning</h2>
+		<div>
+			There are 3 types of element positioning: static, relative, and absolute.
+			<ul>
+				<li><span class="boldtext">Static positioning</span> is default for all elements, except for html, which is relative</li>
+				<li><span class="boldtext">Relative positioning</span> offsets the element relative to its normal document flow position. It can be done by using the CSS style <i>position: relative;</i></li>
+				<li><span class="boldtext">Absolute positioning</span> is relative to the closest ancestor which has its positioning set to a non-static value. It can be done using the CSS style <i>position: absolute;</i></li>
+			</ul>
+			To move a certain element to a certain place, use the CSS styles top, left, bottom or right (e.g. <i>top: 40px;</i>). The direction and distance the element moves is determined by this; the direction used is basically opposite to the direction it will go. Using the previous example in italics, the element will go DOWN 40 pixels instead of going up. 
+		</div>
+		<div>Also, changing the positioning of the element that contains other elements (with changed positions) offsets its contents as well.</div>
+	</section>
+	
+	<br>
+	
+	<section id="lecture23">
+		<h2>Lecture 23 on Media Queries</h2>
+		<div>Media queries in HTML are used to make websites responsive to different screen sizes and devices. They help determine how web content should be displayed based on factors like screen width and device type.</div>
+		<div>Media queries are structured like this:</div>
+			<br>
+			<i>&commat;media (max-width: 600px) &lcub;
+				... <!-- This is where CSS rules for up to 600px wide should go -->
+				&rcub;
+			</i>
+			<br>
+			<br>
+		<div>In this example, when the width of the browser is 600 pixels or less, the enclosed CSS rules apply.</div>
+		<div>
+			There are also other attributes you can use with <i>&commat;media</i>, such as <i>min-width</i> (to say the minimum width to apply the CSS rules), <i>orientation</i> (pretty self-explanatory), <i>screen</i>, and <i>print</i>.
+		</div>
+		<div>
+			You can also mix these attributes together, by using <span class="boldtext">and</span> (which means that CSS will be applied only if BOTH attributes are met)
+			<!--  @media (min-width: 1080px) and (max-width: 1439px) {...}  -->
+			or by using <span class="boldtext">a comma</span> (which means that CSS will be applied if EITHER attributes are met). 
+			<!--  @media (orientation: portrait) , (min-width: 1440px) {...}  -->
+			(See comments for examples)
 		</div>
 	</section>
 	
